@@ -6,16 +6,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     dropdowns.forEach((dropdown) => {
         const dropdownMenu = dropdown.querySelector(".dropdown-menu");
-
-        dropdown.addEventListener("mouseenter", () => {
-            dropdownMenu.classList.add("show");
-        });
-
-        dropdown.addEventListener("mouseleave", () => {
-            dropdownMenu.classList.remove("show");
-        });
+    
+        if (dropdownMenu) {
+            dropdown.addEventListener("mouseenter", () => {
+                dropdownMenu.classList.add("show");
+            });
+    
+            dropdown.addEventListener("mouseleave", () => {
+                dropdownMenu.classList.remove("show");
+            });
+        }
     });
 });
+
+
 
 //
 
