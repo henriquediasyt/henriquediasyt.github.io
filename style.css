@@ -9,7 +9,8 @@
 }
 
 body {
-    background: linear-gradient(135deg, #1e1e1e 0%, #3b3b3b 100%);
+    background: rgb(53, 53, 53);
+    background: linear-gradient(310deg, rgba(53, 53, 53, 1) 0%, rgba(8, 8, 8, 1) 100%);
     color: white;
     display: flex;
     flex-direction: column;
@@ -206,7 +207,6 @@ header img {
 .menuHeader {
     width: 45vw;
     height: 100vh;
-    background-color: #e9e9e9;
     display: none;
     position: fixed;
     z-index: 200;
@@ -219,8 +219,27 @@ header img {
     text-align: center;
     border-radius: 200px 0px 0px 200px / 500px 0px 0px 500px;
     padding-left: 80px;
-    padding-right: '5' px;
+    padding-right: 5px;
+    background-color: #1e1e1e;
+    overflow: hidden;
+    border-left: 2px solid #cfcfcfbb;
 }
+
+.menuHeader::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('img/autor.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+
 
 .animaMenuHeader {
     animation: animaMenuHeader 0.4s;
@@ -267,7 +286,7 @@ header img {
 }
 
 .menuHeader h1 {
-    color: black;
+    color: white;
     align-items: center;
 }
 
@@ -316,9 +335,12 @@ a {
 
 .contato h2 {
     margin-top: -50px;
-    font-size: 2rem;
+    margin-left: -10px;
+    font-size: 2.6rem;
     margin-bottom: 30px;
-    color: black;
+    color: white;
+    font-style: italic;
+    cursor: default;
 }
 
 .contato ul {
@@ -327,20 +349,17 @@ a {
 }
 
 .contato ul li {
-    margin-bottom: 10px;
-    color: black;
+    margin-bottom: 17px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: default;
 }
 
 .contato ul li a {
-    color: black;
-    text-decoration: none;
-    transition: color 0.4s;
-}
-
-.contato ul li a {
-    color: black;
+    color: white;
     text-decoration: underline;
     transition: color 0.4s;
+    cursor: pointer;
 }
 
 .contato ul li a:hover {
@@ -407,7 +426,7 @@ a {
     border-radius: 20px;
     z-index: 9000;
     text-align: left;
-    padding: 20px 50px;
+    padding: 35px 50px;
 }
 
 .referencias h2 {
@@ -473,6 +492,7 @@ a {
         width: 100%;
         border-radius: 0px 0px 60px 60px;
         padding: 20px;
+        background-color: #1e1e1e;
     }
 
     .animaMenuHeader {
@@ -517,5 +537,16 @@ a {
 
     #projetos a {
         margin-bottom: 100px;
+    }
+
+    .referencias {
+        width: 100vw;
+        margin-left: -50vw;
+    }
+
+    .menuHeader {
+        border: none;
+        height: 90vh;
+        padding-top: 10vh;
     }
 }
