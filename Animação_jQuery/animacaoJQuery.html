@@ -74,22 +74,23 @@
     <button onclick="Mostrar();"> MOSTRAR </button>
     <div class="D1" id="D1"></div>
 
+
+    <script>
+        function Esconder() {
+            $("#D1").animate({
+                width: "50vw",
+                height: "5px",
+            }, 2000)
+        }
+
+        function Mostrar() {
+            $("#D1").animate({
+                width: "50vw",
+                height: "60vh",
+            }, 2000)
+        }
+    </script>
+
 </body>
-
-<script>
-    function Esconder() {
-        $("#D1").animate({
-            width: "50vw",
-            height: "5px",
-        }, 2000)
-    }
-
-    function Mostrar() {
-        $("#D1").animate({
-            width: "50vw",
-            height: "60vh",
-        }, 2000)
-    }
-</script>
 
 </html>
