@@ -367,7 +367,7 @@ a {
 }
 
 #menuHeader>div>ul>a {
-    color: black;
+    color: white;
     text-decoration: underline;
     transition: color 0.4s;
 }
